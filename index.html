@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SukaRasa — camilan tradisional pilihan dari UMKM lokal Indonesia.">
+  <title>SukaRasa Premium | Camilan Nusantara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar"><span>✦ Gratis ongkir untuk pembelian minimal Rp100.000</span><span>♧ Produk lokal berkualitas</span><span>◷ Layanan pelanggan 08.00–21.00</span></div>
+  <header class="header">
+    <a class="brand" href="#beranda"><span class="brand-mark">❧</span><span>SukaRasa<small>CAMILAN NUSANTARA</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi">☰</button>
+    <nav id="navMenu">
+      <a href="#beranda">Beranda</a><a href="#produk">Produk</a><a href="#tentang">Tentang Kami</a><a href="#testimoni">Testimoni</a><a href="#artikel">Artikel</a><a href="#kontak">Kontak</a>
+    </nav>
+    <div class="header-actions">
+      <label class="searchbox"><input id="searchInput" type="search" placeholder="Cari produk favorit..." aria-label="Cari produk"><button id="searchButton" aria-label="Cari">⌕</button></label>
+      <button class="icon-button" id="accountButton" aria-label="Info pelanggan">♙</button>
+      <button class="icon-button" id="wishlistButton" aria-label="Lihat favorit">♡<span class="tiny-count" id="wishlistCount">0</span></button>
+      <button class="icon-button cart-trigger" id="cartButton" aria-label="Keranjang">🛒<span class="tiny-count" id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <span class="pill">✦ UMKM Lokal Indonesia</span>
+        <p class="overline">RASA ASLI, CERITA BERARTI</p>
+        <h1>Nikmati Kelezatan<br><em>Camilan Tradisional</em><br>Dari Desa Kami.</h1>
+        <p class="hero-description">Menghadirkan camilan pilihan dengan cita rasa khas Nusantara, dibuat dengan penuh perhatian dan dikemas dengan sentuhan modern.</p>
+        <div class="hero-actions"><a class="btn btn-gold" href="#produk">Belanja Sekarang <span>↗</span></a><a class="btn btn-glass" href="#tentang">Kenali Cerita Kami</a></div>
+        <div class="hero-proof"><span>★★★★★</span><p><strong>4,8/5</strong><small>Dipercaya pecinta camilan lokal</small></p></div>
+      </div>
+      <div class="hero-note"><span>✧</span><p>Rasa Tradisional<br><strong>Kualitas Terbaik</strong></p></div>
+      <div class="hero-pagination"><span class="active"></span><span></span><span></span></div>
+    </section>
+
+    <section class="trustbar">
+      <div><span class="trust-icon">❧</span><p><strong>Bahan Pilihan</strong><small>Bahan berkualitas</small></p></div>
+      <div><span class="trust-icon">✓</span><p><strong>Proses Higienis</strong><small>Diolah dengan teliti</small></p></div>
+      <div><span class="trust-icon">♧</span><p><strong>Pengiriman Praktis</strong><small>Pesan dengan mudah</small></p></div>
+      <div><span class="trust-icon">♡</span><p><strong>Dukung UMKM</strong><small>Majukan usaha lokal</small></p></div>
+      <div><span class="trust-icon">✦</span><p><strong>Layanan Ramah</strong><small>Siap membantu Anda</small></p></div>
+    </section>
+
+    <section class="section products-section" id="produk">
+      <div class="section-heading"><div><p class="overline">PILIHAN FAVORIT</p><h2>Produk <em>Unggulan</em></h2><p class="section-subtitle">Temukan camilan favorit untuk menemani momen istimewa Anda.</p></div><div class="catalog-controls"><span id="productTotal">6 produk</span><select id="sortSelect" aria-label="Urutkan produk"><option value="featured">Pilihan kami</option><option value="low">Harga terendah</option><option value="high">Harga tertinggi</option><option value="name">Nama A–Z</option></select></div></div>
+      <div class="category-tabs" id="categoryTabs"><button class="active" data-category="Semua">Semua Produk</button><button data-category="Gurih">Gurih</button><button data-category="Manis">Manis</button><button data-category="Paket">Paket Hemat</button></div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-message" id="emptyMessage" hidden>Produk tidak ditemukan. Silakan coba kata kunci lain.</p>
+      <div class="center"><button class="btn btn-outline-green" id="showAllButton">Lihat Semua Produk ↓</button></div>
+    </section>
+
+    <section class="story-section section" id="tentang">
+      <div class="story-photo"><img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=85" alt="Suasana dapur dan persiapan makanan"><span class="photo-caption">Dari desa, untuk Indonesia ♡</span></div>
+      <div class="story-copy"><p class="overline">CERITA DI BALIK SUKARASA</p><h2>Berawal dari Dapur,<br><em>Hadir untuk Indonesia.</em></h2><p>SukaRasa adalah konsep UMKM camilan yang mengangkat cita rasa tradisional dengan tampilan yang lebih modern. Kami percaya, produk lokal menyimpan cerita, kreativitas, dan peluang untuk tumbuh bersama.</p><p>Setiap produk kami hadir dengan perhatian pada rasa, kemasan, dan pengalaman pelanggan—agar camilan sederhana terasa lebih istimewa.</p><a href="#kontak" class="text-link">Kenali kami lebih dekat <span>→</span></a>
+        <div class="stats"><div><strong>6+</strong><small>Varian produk</small></div><div><strong>100%</strong><small>Semangat lokal</small></div><div><strong>4.8/5</strong><small>Target kepuasan</small></div></div>
+      </div>
+    </section>
+
+    <section class="promo section" id="promo">
+      <div class="promo-copy"><span class="pill pill-light">PAKET PILIHAN</span><h2>Lebih Hemat,<br><em>Lebih Banyak Cerita.</em></h2><p>Gabungkan camilan favorit Anda dalam satu paket untuk keluarga, teman, atau hadiah sederhana.</p><a class="btn btn-gold" href="#produk" id="promoButton">Jelajahi Paket <span>↗</span></a><small>*Harga dan ketersediaan dapat dikonfirmasi kepada penjual.</small></div>
+      <div class="promo-art"><div class="promo-circle">Pilihan<br><strong>Spesial</strong></div><img src="https://images.unsplash.com/photo-1621939514649-280e2aa8c2b9?auto=format&fit=crop&w=800&q=85" alt="Pilihan camilan untuk paket spesial"></div>
+    </section>
+
+    <section class="section testimonials" id="testimoni">
+      <div class="section-heading"><div><p class="overline">CERITA PELANGGAN</p><h2>Sepotong Rasa,<br><em>Sejuta Kesan.</em></h2><p class="section-subtitle">Contoh tampilan ulasan yang dapat diganti dengan ulasan pelanggan asli.</p></div><div class="review-score"><strong>4.8<span>/5</span></strong><span>★★★★★</span><small>Konsep rating pelanggan</small></div></div>
+      <div class="review-grid">
+        <article class="review-card"><div class="stars">★★★★★</div><p>“Kemasannya menarik dan cocok dijadikan buah tangan. Pilihan produknya juga beragam.”</p><div class="review-person"><span class="avatar">RA</span><div><strong>Rani A.</strong><small>Pelanggan contoh</small></div></div></article>
+        <article class="review-card"><div class="stars">★★★★★</div><p>“Suka konsep yang mengangkat camilan lokal. Semoga semakin banyak produk UMKM berkembang.”</p><div class="review-person"><span class="avatar">DP</span><div><strong>Dimas P.</strong><small>Pelanggan contoh</small></div></div></article>
+        <article class="review-card"><div class="stars">★★★★★</div><p>“Tampilan website mudah dipahami dan proses pemesanan dibuat praktis melalui WhatsApp.”</p><div class="review-person"><span class="avatar">NS</span><div><strong>Nadia S.</strong><small>Pelanggan contoh</small></div></article>
+      </div>
+    </section>
+
+    <section class="section blog-section" id="artikel">
+      <div class="section-heading"><div><p class="overline">JURNAL NUSANTARA</p><h2>Cerita di Balik <em>Camilan.</em></h2><p class="section-subtitle">Konten edukasi untuk mengenal bahan dan semangat usaha lokal.</p></div></div>
+      <div class="blog-grid">
+        <article class="blog-card"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80" alt="Bahan makanan dan roti"><div><span>INSPIRASI • 3 MENIT BACA</span><h3>Menjaga Kualitas dari Bahan Pilihan</h3><p>Kualitas produk dimulai dari perhatian terhadap bahan, kebersihan, dan proses pengolahan.</p><a href="#kontak">Baca selengkapnya →</a></div></article>
+        <article class="blog-card"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=700&q=80" alt="Bahan pangan segar"><div><span>UMKM • 4 MENIT BACA</span><h3>Mengapa Produk Lokal Layak Didukung?</h3><p>Memilih produk lokal ikut membuka peluang bagi kreativitas dan usaha di sekitar kita.</p><a href="#kontak">Baca selengkapnya →</a></div></article>
+        <article class="blog-card"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=700&q=80" alt="Persiapan makanan"><div><span>TIPS • 2 MENIT BACA</span><h3>Menyimpan Camilan Agar Tetap Nikmat</h3><p>Gunakan wadah tertutup dan ikuti petunjuk penyimpanan pada kemasan produk.</p><a href="#kontak">Baca selengkapnya →</a></div></article>
+      </div>
+    </section>
+
+    <section class="newsletter section"><div><p class="overline">KABAR SUKARASA</p><h2>Dapatkan cerita dan info terbaru.</h2><p>Masukkan email untuk menyiapkan formulir minat newsletter.</p></div><form id="newsletterForm"><input type="email" id="newsletterEmail" placeholder="Alamat email Anda" required><button class="btn btn-gold" type="submit">Saya tertarik ↗</button></form><p class="newsletter-note" id="newsletterNote" role="status"></p></section>
+  </main>
+
+  <footer class="footer" id="kontak">
+    <div class="footer-main">
+      <div class="footer-about"><a class="brand brand-footer" href="#beranda"><span class="brand-mark">❧</span><span>SukaRasa<small>CAMILAN NUSANTARA</small></span></a><p>Camilan tradisional, sentuhan modern. Mari dukung produk lokal dan lestarikan rasa Nusantara.</p><div class="socials"><a href="#kontak" aria-label="Instagram">◎</a><a href="#kontak" aria-label="TikTok">♪</a><a href="#kontak" aria-label="Facebook">f</a></div></div>
+      <div><h3>Jelajahi</h3><a href="#beranda">Beranda</a><a href="#produk">Semua Produk</a><a href="#tentang">Tentang Kami</a><a href="#testimoni">Testimoni</a><a href="#artikel">Artikel</a></div>
+      <div><h3>Kategori</h3><a href="#produk" data-footer-category="Gurih">Camilan Gurih</a><a href="#produk" data-footer-category="Manis">Camilan Manis</a><a href="#promo">Paket Hemat</a><a href="#produk">Produk Terbaru</a></div>
+      <div><h3>Hubungi Kami</h3><p>☎ <span id="footerPhone">+62 85641842260</span></p><p>✉ halo@sukarasa.example</p><p>⌖ Indonesia</p><a class="footer-wa" id="footerWhatsApp" href="https://wa.me/6285641842260" target="_blank" rel="noopener">Chat via WhatsApp ↗</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> SukaRasa. Konsep website UMKM.</span><div><a href="#kontak">Kebijakan Privasi</a><a href="#kontak">Syarat & Ketentuan</a></div></div>
+  </footer>
+
+  <button class="floating-chat" id="chatButton" aria-label="Chat WhatsApp">☏<span>Butuh bantuan?</span></button>
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="cartDrawer" aria-hidden="true" aria-label="Keranjang belanja"><div class="drawer-head"><div><p class="overline">PESANAN ANDA</p><h2>Keranjang Belanja</h2></div><button id="closeCart" aria-label="Tutup">✕</button></div><div class="drawer-items" id="cartItems"></div><div class="drawer-bottom"><div class="total-line"><span>Subtotal</span><strong id="cartTotal">Rp0</strong></div><small>Biaya pengiriman dikonfirmasi oleh penjual.</small><button class="btn btn-green checkout-button" id="checkoutButton">Lanjut Pesan via WhatsApp ↗</button></div></aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal" id="infoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="closeModal" aria-label="Tutup">✕</button><span class="modal-icon">✧</span><h2 id="modalTitle">Selamat datang di SukaRasa</h2><p id="modalText">Website ini merupakan contoh katalog UMKM. Hubungi penjual untuk konfirmasi produk, pembayaran, dan pengiriman.</p><button class="btn btn-green" id="modalOk">Mengerti</button></div>
+  <script src="script.js"></script>
+</body>
+</html>
